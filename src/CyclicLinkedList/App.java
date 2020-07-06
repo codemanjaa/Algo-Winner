@@ -11,6 +11,9 @@ public class App {
         cyclicLinkedList.insertFirst(40);
         cyclicLinkedList.deleteLast();
 
+        System.out.println("<<--------->>>");
+
+
         cyclicLinkedList.displayList();
     }
 }
