@@ -73,7 +73,6 @@ public class CyclicLinkedList {
 
             while (current != null) {
                 if (current.next == last) {
-
                     nLast = current;
                     current.next = null;
                     break;
@@ -84,15 +83,10 @@ public class CyclicLinkedList {
 
             }
 
-            System.out.println("====="+ last.data);
-
-
-
-
+            System.out.println("Removed data ===> "+ last.data);
         }
         last = nLast;
         return temp;
-
     }
 
 
