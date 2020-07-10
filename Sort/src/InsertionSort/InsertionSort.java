@@ -15,8 +15,8 @@ public class InsertionSort {
 
     public static int[] sortInsertion(int arr[]){
 
-        for(int i=1; i<arr.length; i++){
-            for(int inner = i; inner > 0; inner--) {
+        for(int out=1; out<arr.length; out++){
+            for(int inner = out; inner > 0; inner--) {
                 if(arr[inner] < arr[inner-1]){
                     int temp = arr[inner-1];
                     arr[inner-1] = arr[inner];
