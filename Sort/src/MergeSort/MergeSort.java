@@ -25,9 +25,9 @@ public class MergeSort {
 
     public static void merge(int arr[], int start, int mid, int end ) {
 
-        int i =start; int j = mid; int loc = 0;
+        //int i =start; int j = mid; int loc = 0;
 
-        for(int a=0; a<arr.length; a++ ){
+        /*for(int a=0; a<arr.length; a++ ){
             if (arr[i] > arr[j]) {
                 arr[a] = arr[j];
                 j++;
@@ -37,8 +37,46 @@ public class MergeSort {
                     i++;
                 }
 
+            }*/
+
+        int tempArray[] = new int[end - start +1];
+
+        int leftSlot = start;
+        int rightSlot = mid + 1;
+        int loc = 0;
+
+        while(leftSlot <= mid && rightSlot <= end){
+            if(arr[leftSlot] < arr[rightSlot]){
+                tempArray[loc] = arr[leftSlot];
+                leftSlot++;
+            }
+            else {
+                tempArray[loc] = arr[rightSlot];
+                rightSlot++;
+            }
+            loc++;
+        }
+
+        if(leftSlot <= mid){
+            while(leftSlot <= mid) {
+                tempArray[loc] = arr[leftSlot];
+                leftSlot++;
+                loc++;
+            }
+        }
+        else if(rightSlot <= end){
+            while(rightSlot <= end) {
+                tempArray[loc] = arr[rightSlot];
+                rightSlot++;
+                loc++;
             }
         }
 
+        for(int i =0; i<tempArray.length; i++){
+            arr[start+i] = tempArray[i];
+        }
+
     }
+
+}
 
