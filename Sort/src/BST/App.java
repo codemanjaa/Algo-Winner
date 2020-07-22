@@ -14,5 +14,7 @@ public class App {
 
         System.out.println(tree.delete(10));
         System.out.println(tree.findMin().key);
+
+        tree.printTree();
     }
 }

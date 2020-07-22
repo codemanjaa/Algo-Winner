@@ -164,6 +164,32 @@ public class BST {
 
     }
 
+    //TODO
+    public void printTree(){
+        Node current = root;
+        Node parent = root;
+        Node leftChild = null;
+        Node rightChild = null;
+
+
+        while(current != null){
+
+            System.out.println(current.key);
+            if(current.leftChild != null){
+               printTree();
+               current = current.leftChild;
+
+            }
+            if(current.rightChild != null){
+                printTree();
+                current = current.rightChild;
+
+            }
+
+        }
+
+    }
+
 }
 
 
